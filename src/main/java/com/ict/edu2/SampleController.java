@@ -5,6 +5,9 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 
@@ -87,5 +90,17 @@ public class SampleController {
 
         }
     }
+
+    @PostMapping("/hi")
+    public String gethi() {
+        return "hi, 안녕하세요, 방가방가";
+    }
+    
+
+    @PostMapping("/hi2")
+    public String[] getHi2(String idx) {
+        return new String[] { "Hello", "World"};
+    }
+    
 
 }
